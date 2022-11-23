@@ -1,0 +1,15 @@
+name: 'Deploy to Render cloud'
+description: 'Deploy a static website to Render cloud.'
+inputs:
+  service-id:
+    description: 'Service Id'
+    required: true
+  render-token:
+    description: 'Token for authentication'
+    required: true
+outputs:
+  website-url:
+    description: 'The URL of the deployed website'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
